@@ -1,0 +1,18 @@
+# key: <anki
+# name: anki
+# --
+`(make-string (1+ (or (org-current-level) 0)) 42)` $1 :@anki:
+:PROPERTIES:
+:ANKI_NOTE_TYPE: `(completing-read "Card type: " '("Basic" "Cloze") nil t)`
+:ANKI_DECK: Default
+:ANKI_TAGS: `(if-let ((all-tags (or (and (require 'anki-editor nil t)
+                                         (with-demoted-errors "Using local tags: %S"
+                                          (anki-editor-all-tags)))
+                                     (and (boundp 'my-anki-tags) my-anki-tags))))
+                    (mapconcat #'identity (completing-read-multiple "Tags: " all-tags) " ") "")`
+:ID: `(org-id-get-create)`
+:END:
+`(make-string (+ 2 (or (org-current-level) 0)) 42)` Front
+${1:Question}
+`(make-string (+ 2 (or (org-current-level) 0)) 42)` Back
+$0
