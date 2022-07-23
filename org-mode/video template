@@ -1,15 +1,19 @@
 # key: <video
 # name: video template
 # --
-<video style="center" width="${1:700}" ${2:autoplay }${3:controls}${4: loop}>
- <source src=`(let ((s (read-file-name "Video file: ")))
+#+begin_export html
+<video style="center" width="${2:700}" ${3:autoplay }${4:controls}${5: loop}>
+ <source src=`(let* ((s (read-file-name "Video file: "))
+                     (s-short (substring s (string-match "/img" s))))
                 (concat "\""
-                        (substring s (string-match "/img" s))
+                        s-short
                         "\" type=\""
                         (substring (shell-command-to-string
                           (concat "mimetype -b 2>/dev/null "
                                   (shell-quote-argument s))) 0 -1)
-                        "\">"))`
-Your browser does not support the video tag.
-</video>
+                        "\">\n<a href="
+                        s-short
+                        "\">"
+                        ))`${6:[VIDEO]}</a></video>
+#+end_export
 $0
