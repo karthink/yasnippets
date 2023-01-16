@@ -1,6 +1,7 @@
-# key: ddot
-# name: ddot
-# expand-env: ((argument 't))
+# -*- mode: snippet -*-
+# name: ddots
+# key: ;/
+# group: math
 # condition: (and (texmathp) 'auto)
 # --
-`(condition-case nil (progn (backward-sexp) (kill-sexp) (delete-char 1)) (error (setq argument 'nil)))`\\ddot{`(if argument (current-kill 0))`}$0
+\\ddots
