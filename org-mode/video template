@@ -2,7 +2,7 @@
 # name: video template
 # --
 #+begin_export html
-<video style="center" width="${2:700}" ${3:autoplay }${4:controls}${5: loop}>
+<video preload="metadata" style="center" width="${2:700}" ${3:autoplay }${4:controls}${5: loop}>
  <source src=`(let* ((s (read-file-name "Video file: "))
                      (s-short (substring s (string-match "/img" s))))
                 (concat "\""
