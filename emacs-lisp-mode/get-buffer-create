@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: get-buffer-create
+# key: gbc
+# --
+(get-buffer-create $0)

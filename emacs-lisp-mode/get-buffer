@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: get-buffer
+# key: gb
+# --
+(get-buffer "${1:`(read-buffer "Buffer:")`}")$0
