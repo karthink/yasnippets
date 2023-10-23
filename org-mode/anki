@@ -10,7 +10,6 @@
                                           (anki-editor-all-tags)))
                                      (and (boundp 'my-anki-tags) my-anki-tags))))
                     (mapconcat #'identity (completing-read-multiple "Tags: " all-tags) " ") "")`
-:ID: `(org-id-get-create)`
 :END:
 `(make-string (+ 2 (or (org-current-level) 0)) 42)` Front
 ${1:Question}

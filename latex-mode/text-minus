@@ -1,0 +1,5 @@
+# key: tm
+# name: text-minus
+# condition: (and (texmathp) 'auto)
+# --
+\text{-}$0
