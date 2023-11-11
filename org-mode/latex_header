@@ -1,0 +1,5 @@
+# key: lh
+# name: latex_header
+# condition: (save-excursion (backward-word) (bolp))
+# --
+#+latex_header: $0

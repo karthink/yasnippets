@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: latex_class
+# key: lc
+# condition: (save-excursion (backward-word) (bolp))
+# --
+#+latex_class: $0
