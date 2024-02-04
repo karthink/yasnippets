@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: hash-plus
 # key: 3=
-# condition: 'auto
+# condition: (and (= (- (point) (line-beginning-position)) 2) 'auto)
 # --
 #+$0
