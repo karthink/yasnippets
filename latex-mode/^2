@@ -4,4 +4,4 @@
 # condition: (and (texmathp) 'auto)
 # group: math
 # --
-`(delete-backward-char 1)`^2$0
+^2$0

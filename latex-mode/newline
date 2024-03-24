@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: newline
-# key: ;;
+# key: \\
 # condition: (and (texmathp) 'auto)
 # group: math
 # --
