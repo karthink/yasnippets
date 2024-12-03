@@ -4,4 +4,4 @@
 # group: references
 # name : \cite
 # --
-`(unless yas-modified-p (call-interactively 'citar-insert-citation))`
+`(unless yas-modified-p (setq this-command 'citar-insert-citation) (call-interactively 'citar-insert-citation))`

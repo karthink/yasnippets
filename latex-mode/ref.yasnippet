@@ -4,4 +4,4 @@
 # group: references
 # name : \ref
 # --
-`(unless yas/modified-p (consult-reftex-insert-reference nil 'dont-insert))`
+`(unless yas/modified-p (setq this-command 'consult-reftex-insert-reference) (consult-reftex-insert-reference nil 'dont-insert))`
