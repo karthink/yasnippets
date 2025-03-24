@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: ddots
-# key: ;/
+# key: /,
 # group: math
 # condition: (and (texmathp) 'auto)
 # --

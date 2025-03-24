@@ -1,8 +1,15 @@
 # -*- mode: snippet -*-
 # name: bar
 # key: bar
+# type: command
 # condition: (and (texmathp) 'auto)
-# expand-env: ((argument (quote t)))
 # group: math
 # --
-`(condition-case nil (progn (backward-sexp) (kill-sexp) (delete-char 1)) (error (setq argument 'nil)))`\\bar{`(if argument (current-kill 0))`}$0
+(let ((argument t))
+  (condition-case nil
+      (progn
+        (backward-sexp)
+        (kill-sexp)
+        (delete-char 1))
+    (error (setq argument 'nil)))
+  (insert "\\bar{" (if argument (current-kill 0) "") "}"))
